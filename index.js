@@ -1,5 +1,15 @@
 function isPalindrome(word) {
   // Write your algorithm here
+let charArr = []
+for (i in word) {
+  charArr.push(word[i])
+}
+let backwardsCharArr = []
+while (backwardsCharArr.length < word.length) {
+  backwardsCharArr.push(charArr.pop())
+}
+let backwordsWords = backwardsCharArr.join('')
+return backwordsWords === word
 }
 
 /* 
